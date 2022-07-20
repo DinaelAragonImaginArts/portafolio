@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-general;
+  transition: all 0.5s;
+}
+
+a,
+button,
+p {
+  font-family: $roboto;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: $azul-primario;
+}
+
+body::-webkit-scrollbar{
+  width: 5px;
+  background-color: $azul-tercer;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: $negro;
+}
+
+.btn-enlace {
+  border: none;
+  color: $perla;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-color: transparent;
+  opacity: 0.5;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,89 @@
+.home-container {
+    background-color: $azul-primario;
+    margin: 45px 0 0 0;
+    width: 100%;
+    padding: 20px 0;
+    height: calc(100vh - 45px);
+    position: relative;
+    user-select: none;
+}
+
+.home-container::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+   background-color: $azul-secundario;
+}
+
+.presentacion-container{
+    display: flex; 
+    height: 90%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.elyo{
+    max-width: 50%;
+    color: $perla;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    padding: 2rem;
+}
+.animacion{
+    max-width: 350px;
+}
+
+
+.down{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 24px;
+    height: 40px;
+    border: 2px solid $azul-secundario;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: $azul-secundario;
+    opacity: 0.5;
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: transparent;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.down p{
+    animation: animacionP  1s ease infinite;
+}
+
+@keyframes animacionP {
+    to{
+        transform: translateY(0px);
+    }
+    from{
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 750px) {
+    .presentacion-container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    } 
+    .elyo{
+        min-width: 90%;
+        margin: 0 auto;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 0;
+    }
+}
